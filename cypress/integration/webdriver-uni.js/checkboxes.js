@@ -2,15 +2,16 @@
 
 describe("Verify checkboxes via webdriveruni", () => {
     beforeEach(()=>{
-        cy.visit("/");
+        cy.visit("/",{timeout:60000});
         cy.get("#dropdown-checkboxes-radiobuttons").invoke("removeAttr", "target").click({ force: true });
     })
     it("Check and validate checkbox", () => {
        
         // cy.get('#checkboxes > :nth-child(1) > input').check();
         // cy.get('#checkboxes > :nth-child(1) > input').check().should("not.be.checked");
+        Cypress.config("defaultCommandTimeout",20000)
         cy.get('#checkboxes > :nth-child(1) > input').as("option-1");
-        cy.get("@option-1").check();
+        cy.get("@option-1").check(),{timeout:30000}
         cy.get("@option-1").check().should("be.checked");
     })
     it("Check and validate uncheck checkbox ", () => {
