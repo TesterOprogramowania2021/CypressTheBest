@@ -9,14 +9,19 @@ describe("Test contact us form WebdriverUni", () => {
         cy.fixture("example").then(data=>{
             // this.data = data;
             globalThis.data = data;
+            
         })
+        
     })
     beforeEach(()=>{
         // cy.navigateToHomepageAndContactUs();
+       
         homePage_PO.visitHomepage()
+        cy.viewport('iphone-6')
         cy.wait(3000)
         homePage_PO.clickOn_ContactUs_Button();
         // cy.pause();
+        
     })
     it("Should be able to submit a saccesful submission via contact us form", () => {
         cy.document().should('have.property', 'charset').and('eq', 'UTF-8');

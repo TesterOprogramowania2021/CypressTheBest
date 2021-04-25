@@ -13,7 +13,7 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 require('cypress-xpath');
-
+require('cypress-plugin-retries')
 // Import commands.js using ES2015 syntax:
 import './commands'
 // Alternatively you can use CommonJS syntax:

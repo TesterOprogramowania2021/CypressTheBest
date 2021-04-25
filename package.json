@@ -4,13 +4,16 @@
   "description": "Secend curs projeckt",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "triggerAllTestst-headless": "npx cypress run",
+    "triggerAllTestst-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser firefox"
   },
   "author": "Szymon Wasiak",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.5.0",
+    "cypress": "^4.12.1",
     "cypress-file-upload": "^5.0.6",
+    "cypress-plugin-retries": "^1.5.2",
     "cypress-xpath": "^1.6.2"
   }
 }

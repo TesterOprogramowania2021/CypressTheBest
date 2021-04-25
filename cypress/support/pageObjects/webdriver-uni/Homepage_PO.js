@@ -9,7 +9,8 @@ class HomePage_PO{
     }
     clickOn_ContactUs_Button(){
         cy.get(this.selectors.slectorContactUs).invoke("removeAttr","target").click({force:true});
-      
+        cy.screenshot()
+        cy.screenshot("Nazwa zrzutu ekranu")
     }
 
 

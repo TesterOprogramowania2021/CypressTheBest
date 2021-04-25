@@ -3,6 +3,8 @@
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 30000,
+  "viewportWidth": 768,
+  "viewportHeight":1021,
   "env": {
     "webdriver-homepage": "http://webdriveruniversity.com",
     "first_name": "sarah"

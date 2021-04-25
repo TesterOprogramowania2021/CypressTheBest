@@ -6,6 +6,8 @@ class Contact_Us_PO {
         cy.get('textarea.feedback-input').type(comment)
         cy.get('[type="submit"]').click();
         cy.get($selector).contains(textToLocate, {timeout:3000})
+        cy.screenshot()
+        cy.screenshot("Nazwa zrzutu ekranu")
     }
 }
 export default Contact_Us_PO;

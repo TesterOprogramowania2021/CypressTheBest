@@ -16,7 +16,10 @@ describe("Checked some feauter in test shop, with adding something to card and m
         
     })
     it("Clikc on a first item using index", () => {
-        cy.visit("https://automationteststore.com/");
+        cy.visit("https://automationteststore.com/")
+        // .then(()=>{
+        //     debugger
+        // })
         cy.get(".fixed_wrapper").find(".fixed").eq(0).click();
         
     })
