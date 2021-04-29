@@ -38,13 +38,14 @@ describe("Test contact us form WebdriverUni", () => {
         // cy.get('#contact-us').click({force: true});
 
     })
-    it("Should not be able to submit a succesful submision via contact us form ass all fields requaired", () => {
+    it.only("Should not be able to submit a succesful submision via contact us form ass all fields requaired", () => {
         //cy.visit("http://webdriveruniversity.com/Contact-Us/contactus.html"); 
+        Cypress.currentTest.retries(4);
         cy.get('[name="first_name"]').type(Cypress.env("first_name"),{});
         cy.get('[name="last_name"]').type("Kowalski");
         cy.get('textarea.feedback-input').type("In my opinion this is the best Cypress curs");
         cy.get('[type="submit"]').click();
-        cy.get('body').contains('Error: all fields are required');
+        cy.get('body').contains('Error: all fields are required2');
 
     })
 
