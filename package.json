@@ -8,7 +8,8 @@
     "triggerAllTestst-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser firefox",
     "trigger-webdriver-uni": "npx cypress run --spec cypress/integration/other/*",
-    "run-multi-browser": "npm run trigger-webdriver-uni -- --browser electron --headed & npm run trigger-webdriver-uni -- --browser firefox --headed"
+    "run-multi-browser": "npm run trigger-webdriver-uni -- --browser electron --headed & npm run trigger-webdriver-uni -- --browser firefox --headed",
+    "run-iframe-tests": "npx cypress run --spec cypress/integration/webdriver-uni.js/iframe.js*"
   },
   "author": "Szymon Wasiak",
   "license": "ISC",
