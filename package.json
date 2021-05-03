@@ -6,7 +6,9 @@
   "scripts": {
     "triggerAllTestst-headless": "npx cypress run",
     "triggerAllTestst-headed": "npx cypress run --headed",
-    "triggerAllTests-chrome": "npx cypress run --browser firefox"
+    "triggerAllTests-chrome": "npx cypress run --browser firefox",
+    "trigger-webdriver-uni": "npx cypress run --spec cypress/integration/other/*",
+    "run-multi-browser": "npm run trigger-webdriver-uni -- --browser electron --headed & npm run trigger-webdriver-uni -- --browser firefox --headed"
   },
   "author": "Szymon Wasiak",
   "license": "ISC",
