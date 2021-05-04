@@ -1,7 +1,7 @@
 /// <reference  types="Cypress" />
 
 describe("Test", function(){
-    it("Validate e two different domains in one test case",function(){
+    it("Validate e two different domains in one test case",{retries:{runMode: 2,openMode: 2}},function(){
         cy.visit("https://www.plushbezlimitu.pl/telefony/przenies-numer");
         cy.clearCookies()
         cy.clearLocalStorage()

@@ -14,9 +14,9 @@
   "author": "Szymon Wasiak",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.12.1",
+    "cypress": "^5.6.0",
     "cypress-file-upload": "^5.0.6",
-    "cypress-plugin-retries": "^1.5.2",
+    
     "cypress-xpath": "^1.6.2"
   }
 }

@@ -5,10 +5,14 @@
   "pageLoadTimeout": 30000,
   "viewportWidth": 768,
   "viewportHeight":1021,
+  "retries": {
+    "runMode": 1,
+    "openMode": 1
+  },
     "projectId": "hgikt5",
   "env": {
     "webdriver-homepage": "http://webdriveruniversity.com",
-    "first_name": "sarah",
-    "RETRIES": 2
+    "first_name": "sarah"
+   
   }
 }

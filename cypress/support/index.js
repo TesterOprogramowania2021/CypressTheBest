@@ -13,7 +13,7 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 require('cypress-xpath');
-require('cypress-plugin-retries')
+
 // Import commands.js using ES2015 syntax:
 import './commands'
 // Alternatively you can use CommonJS syntax:
@@ -21,7 +21,6 @@ import './commands'
     //dzięki tej funkcjo nie wyświetlają się zbędne logi XHR, nie działa na przeglądarce elektron niewiedzieć czemu
     Cypress.Server.defaults({
         
-        whitelist: (xhr) => {
-        return true;
-        }
+       ignore: xhr => true
+        
         })
